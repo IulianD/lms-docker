@@ -11,4 +11,3 @@ RUN echo "deb http://www.deb-multimedia.org buster main non-free" | tee -a /etc/
     apt-get upgrade -y --allow-unauthenticated && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-~                               
