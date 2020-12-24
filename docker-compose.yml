@@ -1,0 +1,20 @@
+version: '3'
+services:
+  lms:
+    container_name: lms
+    image: idragan/logitechmediaserver
+    volumes:
+      - /slow/config:/config:rw
+      - /slow/music:/music:ro
+      - /slow/playlists:/playlist:rw
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    network_mode: host 
+    devices: 
+      - /dev/snd
+    environment:
+      - PUID=1000
+      - PGID=1000    
+    restart: always
+
+
