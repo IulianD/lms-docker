@@ -12,5 +12,7 @@ RUN echo "deb http://www.deb-multimedia.org buster main non-free" | tee -a /etc/
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 COPY docker-entrypoint.sh /lms
+COPY first-run.sh /lms
 RUN chown squeezeboxserver /lms/docker-entrypoint.sh   
+RUN chown squeezeboxserver /lms/first-run.sh   
 ENTRYPOINT ["/lms/docker-entrypoint.sh"] 
