@@ -15,6 +15,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000    
+      - AUDIOGROUP=${AUDIO}  
     restart: always
 
 
